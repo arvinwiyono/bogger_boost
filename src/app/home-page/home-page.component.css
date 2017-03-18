@@ -6,3 +6,19 @@
 #progress-bar-container{
     text-align: center;
 }
+
+#widget-box{
+    margin-top: 20px;
+}
+
+#widget-box > div{
+    text-align: center;
+    height: 330px;
+}
+
+#widget-box > div > div{
+    height: 100%;
+    width: 80%;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
