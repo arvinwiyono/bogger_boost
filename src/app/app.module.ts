@@ -12,6 +12,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
 import { ThroughputWidgetComponent } from './throughput-widget/throughput-widget.component';
 import { FuelWidgetComponent } from './fuel-widget/fuel-widget.component';
+import { TimeWidgetComponent } from './time-widget/time-widget.component';
 
 
 export const routes: Routes = [
@@ -27,7 +28,8 @@ export const routes: Routes = [
     LoginPageComponent,
     FooterPageComponent,
     ThroughputWidgetComponent,
-    FuelWidgetComponent
+    FuelWidgetComponent,
+    TimeWidgetComponent
   ],
   imports: [
     BrowserModule,

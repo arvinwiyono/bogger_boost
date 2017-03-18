@@ -1,0 +1,9 @@
+#bucket-box{
+    background-image: url('./../../assets/stopwatch.png');
+    background-size: 220px auto;
+		background-position: center;
+		background-repeat: no-repeat;
+		min-height: 300px;
+		text-align: center;
+		padding-top: 110px;
+}

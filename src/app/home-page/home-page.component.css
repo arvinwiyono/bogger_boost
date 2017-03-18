@@ -30,8 +30,3 @@
     background-repeat: no-repeat;
     background-position: top;
 }
-
-#bucket-box{
-    background-image: url('./../../assets/stopwatch.png');
-    background-size: 220px auto;
-}
