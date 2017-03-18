@@ -14,11 +14,10 @@
 #widget-box > div{
     text-align: center;
     height: 330px;
+    padding: 20px 30px;
+    text-align: center;
 }
 
-#widget-box > div > div{
-    height: 100%;
-    width: 80%;
-    padding: 20px 30px;
-    border-radius: 10px;
+#widget-box svg{
+    width: 60%;
 }
