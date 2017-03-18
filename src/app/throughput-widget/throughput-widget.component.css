@@ -1,39 +1,29 @@
-#throughput {
-	box-shadow: 0px 2px 6px #aaa;
-	background-color: rgba(214, 214, 214, 0.12);
-}
-
-#throughput-value {
+#throughput-box {
+	background-image: url('./../../assets/throughput.png');
+	background-size: 260px auto;
+	background-position: center;
+	font-weight: bolder;
+	background-repeat: no-repeat;
+	min-height: 300px;
+	text-align: center;
 	color: #FF9700;
-	position: relative;
-	bottom: 95px;
+	padding-top: 110px;
 }
 
-#throughput-value h1 {
-	font-size: 55px;
+#throughput-box h1 {
+	margin-top: 0;
+	font-size: 48px;
 }
 
-#throughput-value span {
-	font-size: 24px;
+#throughput-box h1 span {
+	font-size: 30px;
 }
 
-.widget-container {
+#throughput-box h3 {
+	margin-top: 200px;
+}
+
+#throughput-info {
+	color: #FF9700;
 	text-align: center;
 }
-
-#throughput .widget-content h3 {
-	color: #FF9700;
-}
-
-#throughput .widget-content .subtext {
-	color: #FF9700;
-}
-
-#throughput .img-container img {
-	width: 45%;
-	margin-top: 20px;
-	margin-bottom: -85px;
-}
-
-
-/*back d6d6d6 12%*/
