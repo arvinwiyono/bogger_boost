@@ -4,15 +4,6 @@
     background-color: #2b2b2b;
 }
 
-.banner{
-    background-image: url('./../../assets/banner.jpg');
-    background-size: cover;
-    color: White;
-    height: 150px;
-    padding-top: 40px;
-    margin: 0 -50px;
-}
-
 #progress-bar-container{
     text-align: center;
 }
