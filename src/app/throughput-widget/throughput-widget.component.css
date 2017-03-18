@@ -21,12 +21,12 @@
 	text-align: center;
 }
 
-#throughput .widget-content p {
+#throughput .widget-content h3 {
 	color: #FF9700;
 }
 
 #throughput .widget-content .subtext {
-	color: #FFFF1A;
+	color: #FF9700;
 }
 
 #throughput .img-container img {
