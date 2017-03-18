@@ -20,7 +20,6 @@
 #widget-box{
     margin: 40px -60px 0px -60px;
     height: 400px;
-
 }
 
 #widget-box > div{
@@ -30,14 +29,6 @@
     text-align: center;
     background-repeat: no-repeat;
     background-position: top;
-}
-
-#fuel-box{
-    background-image: url('./../../assets/oildrop.png');
-    background-size: 260px auto;
-    background-position: center;
-    font-weight: bolder;
-    color: #ffc600;
 }
 
 #bucket-box{

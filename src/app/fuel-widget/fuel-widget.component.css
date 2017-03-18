@@ -1,0 +1,11 @@
+#fuel-box{
+    background-image: url('./../../assets/oildrop.png');
+    background-size: 260px auto;
+    background-position: center;
+    font-weight: bolder;
+    color: #ffc600;
+		background-repeat: no-repeat;
+		min-height: 300px;
+		text-align: center;
+		padding-top: 150px;
+}

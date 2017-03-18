@@ -13,7 +13,6 @@ export class HomePageComponent implements OnInit, OnDestroy{
     currentTeamThroughput:number = 3520;
     percentage:number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
     operatorName:string = 'Nick';
-    fuelEfficiency:number = 30;
     connection;
 
     constructor(private socketService: SocketService) {}
