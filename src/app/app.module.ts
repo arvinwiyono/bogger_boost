@@ -29,7 +29,6 @@ export const routes: Routes = [
     HttpModule,
     ChartsModule,
     RouterModule.forRoot(routes)
-
   ],
   providers: [],
   bootstrap: [AppComponent]
