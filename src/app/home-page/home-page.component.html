@@ -1,11 +1,8 @@
 <div class="row" id="homepage-container">
-  <div class="row" style="text-align: center;">
-    <img src="assets/bogger_boost2.png" style="width: 120px;">
-  </div>
-
-  <div class="row" style="text-align:center;">
-    <h2>Hi,
-      {{operatorName}}!</h2>
+  <div class="row banner" style="text-align:center;">
+    <h2 style="font-weight:bold; font-size: 30pt;">Hi,
+      {{operatorName}}!
+    </h2>
   </div>
 
   <div class="row">
@@ -14,7 +11,7 @@
       <div class="row">
         <div class="col-md-9">
           <div class="progress">
-            <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" [ngStyle]="{'width': percentage + '%' }" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" [ngStyle]="{'width': percentage + '%' }" aria-valuemin="0" aria-valuemax="100">
               {{percentage}}% Complete (success)
             </div>
           </div>
@@ -28,16 +25,11 @@
   </div>
 
   <div class="row" id="widget-box">
-      <div class="col-md-4" id="fuel-box">
-          <div>
-              Fuel
-          </div>
-      </div>
-      <app-throughput-widget></app-throughput-widget>
-      <div class="col-md-4" id="bucket-box">
-          <div>
-              Bucket
-          </div>
-      </div>
+    <div class="col-md-4" id="fuel-box">
+      <h4>Fuel Efficiency</h4>
+      <h1>{{fuelEfficiency}}%</h1>
+    </div>
+    <app-throughput-widget></app-throughput-widget>
+    <div class="col-md-4" id="bucket-box"></div>
   </div>
 </div>

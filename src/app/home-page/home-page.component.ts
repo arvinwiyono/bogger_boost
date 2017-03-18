@@ -8,11 +8,12 @@ import { SocketService } from 'app/services/socket.service';
   providers: [SocketService]
 })
 
-export class HomePageComponent implements OnInit, OnDestroy{ 
+export class HomePageComponent implements OnInit, OnDestroy{
     teamThroughputGoal:number = 5000;
     currentTeamThroughput:number = 3520;
     percentage:number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
     operatorName:string = 'Nick';
+    fuelEfficiency:number = 30;
     connection;
 
     constructor(private socketService: SocketService) {}
@@ -23,7 +24,7 @@ export class HomePageComponent implements OnInit, OnDestroy{
         this.currentTeamThroughput = data.teamTonnage;
       })
     }
-  
+
   ngOnDestroy() {
     this.connection.unsubscribe();
   }
