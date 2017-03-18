@@ -8,20 +8,20 @@ import { HomePageComponent } from './home-page/home-page.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
-import { OperatorPageComponent } from './operator-page/operator-page.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 
 export const routes: Routes = [
-  { path: '',  redirectTo: '/home',  pathMatch: 'full'},
-  { path: 'home', component: HomePageComponent },
-  { path: 'operator', component: OperatorPageComponent }
+  { path: '',  redirectTo: '/login',  pathMatch: 'full'},
+  { path: 'login', component: LoginPageComponent },
+  { path: 'home', component: HomePageComponent }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    OperatorPageComponent
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
