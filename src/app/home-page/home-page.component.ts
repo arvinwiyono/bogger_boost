@@ -19,6 +19,7 @@ export class HomePageComponent implements OnInit, OnDestroy{
 
     ngOnInit() {
       this.connection = this.socketService.get().subscribe(data => {
+      	console.log(data);
         this.currentTeamThroughput = data.teamTonnage;
       })
     }
