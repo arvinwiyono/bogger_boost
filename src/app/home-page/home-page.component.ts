@@ -1,14 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy} from '@angular/core';
+import { SocketService } from 'app/services/socket.service';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
+  styleUrls: ['./home-page.component.css'],
+  providers: [SocketService]
 })
 
-export class HomePageComponent{
+export class HomePageComponent implements OnInit, OnDestroy{ 
     teamThroughputGoal:number = 5000;
     currentTeamThroughput:number = 3520;
     percentage:number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
     operatorName:string = 'Nick';
+    connection;
+
+    constructor(private socketService: SocketService) {}
+
+    ngOnInit() {
+      this.connection = this.socketService.get().subscribe(data => {
+        this.currentTeamThroughput = data.teamTonnage;
+      })
+    }
+  
+  ngOnDestroy() {
+    this.connection.unsubscribe();
+  }
+
 }
