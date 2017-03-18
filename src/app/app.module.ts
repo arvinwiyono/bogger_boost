@@ -9,6 +9,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
 
 
 export const routes: Routes = [
@@ -21,7 +22,8 @@ export const routes: Routes = [
   declarations: [
     AppComponent,
     HomePageComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    FooterPageComponent
   ],
   imports: [
     BrowserModule,
