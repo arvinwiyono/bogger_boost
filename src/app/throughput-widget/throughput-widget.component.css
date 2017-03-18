@@ -1,0 +1,39 @@
+#throughput {
+	box-shadow: 0px 2px 6px #aaa;
+	background-color: rgba(214, 214, 214, 0.12);
+}
+
+#throughput-value {
+	color: #FF9700;
+	position: relative;
+	bottom: 95px;
+}
+
+#throughput-value h1 {
+	font-size: 55px;
+}
+
+#throughput-value span {
+	font-size: 24px;
+}
+
+.widget-container {
+	text-align: center;
+}
+
+#throughput .widget-content p {
+	color: #FF9700;
+}
+
+#throughput .widget-content .subtext {
+	color: #FFFF1A;
+}
+
+#throughput .img-container img {
+	width: 75%;
+	margin-top: 20px;
+	margin-bottom: -85px;
+}
+
+
+/*back d6d6d6 12%*/

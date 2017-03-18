@@ -10,6 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { FooterPageComponent } from './footer-page/footer-page.component';
+import { ThroughputWidgetComponent } from './throughput-widget/throughput-widget.component';
 
 
 export const routes: Routes = [
@@ -23,7 +24,8 @@ export const routes: Routes = [
     AppComponent,
     HomePageComponent,
     LoginPageComponent,
-    FooterPageComponent
+    FooterPageComponent,
+    ThroughputWidgetComponent
   ],
   imports: [
     BrowserModule,
