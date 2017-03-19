@@ -30,8 +30,8 @@ export class HomePageComponent implements OnInit, OnDestroy {
   currentTeamThroughput: number = 1000;
   percentage: number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
   operatorName: string = 'Nick Wong - 226016';
-  currentCycleTimeMin: number = 2;
-  currentCycleTimeSec: string = '10';
+  currentCycleTimeMin: number = 0;
+  currentCycleTimeSec: string = '00';
   personalTonnage: number = 500;
   extraCurrentTeamThroughput: number = 0;
 
@@ -53,8 +53,8 @@ export class HomePageComponent implements OnInit, OnDestroy {
                 // clearInterval(refreshMockData);
               }
               this.personalTonnage = Math.round(socketItem.item.totalTonage);
-              this.currentCycleTimeMin = socketItem.item.currentCycleTimeMin;
-              this.currentCycleTimeSec = ("0" + socketItem.item.currentCycleTimeSec).slice(-2);;
+              // this.currentCycleTimeMin = socketItem.item.currentCycleTimeMin;
+              // this.currentCycleTimeSec = ("0" + socketItem.item.currentCycleTimeSec).slice(-2);;
               this.percentage = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
           },
           error => console.log(error)
@@ -65,7 +65,16 @@ export class HomePageComponent implements OnInit, OnDestroy {
     // })
 
     //Comment this section if socketservice works
-
+ let timer = setInterval(() => {
+      let seconds = parseInt(this.currentCycleTimeSec) + 1;
+      if(seconds > 60){
+        this.currentCycleTimeMin = this.currentCycleTimeMin + 1;
+        this.currentCycleTimeSec = "00";
+      }
+      else{
+         this.currentCycleTimeSec = ("0" + seconds).slice(-2);;
+      }
+    }, 1000);
     // let refreshMockData = setInterval(() => {
     //   this.currentTeamThroughput = this.currentTeamThroughput + 100;
     //   if (this.currentTeamThroughput == 5000) {
