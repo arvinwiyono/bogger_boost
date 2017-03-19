@@ -7,7 +7,7 @@
 	min-height: 300px;
 	text-align: center;
 	color: #FF9700;
-	padding-top: 135px;
+	padding-top: 105px;
 }
 
 #throughput-box h1 {
@@ -27,4 +27,17 @@
 #throughput-info {
 	color: #FF9700;
 	text-align: center;
+}
+
+#throughput-info p {
+	letter-spacing: 1.5px;
+}
+
+#throughput-info h3 {
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+#throughput-info p {
+	color: #FFFA3B;
 }
