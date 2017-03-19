@@ -1,4 +1,31 @@
+.personal-tonnage{
+    color: #00dd90 !important;
+    text-align: center;
+    border: 3px solid #00dd90;
+    border-radius: 7px;
+    width: 170px;
+    padding: 5px 0px;
+    transition: all 0.3s ease-in-out;
+}
 
+.personal-tonnage h1{
+    margin-top: 5px;
+}
+
+.personal-tonnage h1 img{
+    width: 20%;
+    margin-top: -6px;
+}
+
+.personal-tonnage:hover{
+    transform: scale(1.05);
+    border-color: #66ffc9;
+    color: #66ffc9 !important;
+}
+
+.personal-tonnage span{
+    font-size: 80%;
+}
 #progress-bar-container{
     text-align: center;
 }

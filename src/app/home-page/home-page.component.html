@@ -6,7 +6,19 @@
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3" id="progress-bar-container">
+
+    <div class="col-md-2 col-md-offset-1">
+      <div class="personal-tonnage">
+        <p>Personal total tonage:</p>
+        <h1>
+          <img src="assets/person.png">
+          {{personalTonnage}}
+          <span>t</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="col-md-6" id="progress-bar-container">
       <h3 style="color:#fff;">Your team's total tonnage</h3>
       <div class="row">
         <div class="col-md-9">
@@ -27,6 +39,6 @@
   <div class="row" id="widget-box">
     <app-fuel-widget></app-fuel-widget>
     <app-throughput-widget></app-throughput-widget>
-	<app-time-widget></app-time-widget>
+    <app-time-widget></app-time-widget>
   </div>
 </div>
