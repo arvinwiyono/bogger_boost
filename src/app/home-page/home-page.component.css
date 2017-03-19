@@ -19,8 +19,6 @@
 
 .personal-tonnage:hover{
     transform: scale(1.05);
-    border-color: #66ffc9;
-    color: #66ffc9 !important;
 }
 
 .personal-tonnage span{
@@ -50,6 +48,5 @@
 
 .throughput-loading-bar > div{
     padding-top: 5px;
-    font-size: 120%;
-    color: black !important;
+    font-size: 110%;
 }
