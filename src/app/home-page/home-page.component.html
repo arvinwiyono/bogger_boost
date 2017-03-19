@@ -9,7 +9,7 @@
 
     <div class="col-md-2 col-md-offset-1">
       <div class="personal-tonnage">
-        <p>Personal total tonage:</p>
+        <p>Personal total tonnage:</p>
         <h1>
           <img src="assets/person.png">
           {{personalTonnage}}
@@ -19,16 +19,18 @@
     </div>
 
     <div class="col-md-6" id="progress-bar-container">
-      <h3 style="color:#fff;">Your team's total tonnage</h3>
       <div class="row">
         <div class="col-md-9">
+            <div class="row">
+                <h3 style="color:#fff;">Your team's total tonnage</h3>
+            </div>
           <div class="progress throughput-loading-bar">
             <div class="progress-bar progress-bar-success progress-bar-striped active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
               {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% <span>Complete (success)</span>
             </div>
           </div>
         </div>
-        <div style="color:#fff;" class="col-md-3" style="font-size: 140%; color: white !important;">
+        <div style="color:#fff;" class="col-md-2 percentage-counter" style="font-size: 140%; color: white !important;">
           {{currentTeamThroughput}}/{{teamThroughputGoal}}
           tons
         </div>
