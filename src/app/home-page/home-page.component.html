@@ -19,34 +19,40 @@
     </div>
 
     <div class="col-md-6 " id="progress-bar-container">
-      <h3 style="color:#fff;">Your team's total tonnage</h3>
+      <div class="row">
+          <div class="col-md-9">
+              <h3 style="color:#fff;">Your team's total tonnage</h3>
+          </div>
+      </div>
       <div class="row">
         <div class="col-md-9 relativeProgressBar">
-                        <div *ngIf="extraCurrentTeamThroughput > 0"class="verticalLine" >          <div style="color:#fff"> + {{extraCurrentTeamThroughput}}</div>
-</div>
+          <div *ngIf="extraCurrentTeamThroughput > 0" class="verticalLine">
+            <div style="color:#fff">
+              +
+              {{extraCurrentTeamThroughput}}</div>
+          </div>
 
           <div class="progress throughput-loading-bar ">
             <div class="progress-bar progress-bar-success progress-bar-striped  active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
-
-              {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% <span>Complete (success)</span>
+              {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}%
+              <span>Complete</span>
             </div>
           </div>
         </div>
-        <div style="color:#fff;" class="col-md-2" style="font-size: 140%; color: white !important;">
-          {{currentTeamThroughput}}/{{teamThroughputGoal}}
-          tonnes
+        <div style="color:#fff;" class="col-md-2" style="font-size: 140%; color: white !important; margin-top: -15px;">
+          {{currentTeamThroughput}}/{{teamThroughputGoal}} tonnes
         </div>
       </div>
     </div>
 
     <div class="col-md-2" style="margin-left: 25px;">
-        <div class="cycle-time">
-          <p>Current cycle time:</p>
-          <h1>
-            <img src="assets/timing.png">
-            {{ currentCycleTimeMin }}:{{ currentCycleTimeSec }}
-          </h1>
-        </div>
+      <div class="cycle-time">
+        <p>Current cycle time:</p>
+        <h1>
+          <img src="assets/timing.png">
+          {{ currentCycleTimeMin }}:{{ currentCycleTimeSec }}
+        </h1>
+      </div>
     </div>
   </div>
 
