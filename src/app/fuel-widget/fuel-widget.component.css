@@ -7,5 +7,14 @@
 		background-repeat: no-repeat;
 		min-height: 300px;
 		text-align: center;
-		padding-top: 150px;
+		padding-top: 135px;
+}
+
+#fuel-box h1 {
+	font-size: 48px;
+}
+
+#fuel-info {
+	text-align: center;
+	color: #ffc600;
 }
