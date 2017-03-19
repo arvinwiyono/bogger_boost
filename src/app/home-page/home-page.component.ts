@@ -28,10 +28,10 @@ export class HomePageComponent implements OnInit, OnDestroy{
       // })
 
       //Comment this section if socketservice works
-     let refreshMockData = setInterval(() => {
+     let refreshMockTonnageData = setInterval(() => {
        this.currentTeamThroughput = this.currentTeamThroughput + 100;
          if(this.currentTeamThroughput == 5000){
-            clearInterval(refreshMockData);
+            clearInterval(refreshMockTonnageData);
        }
      }, 1000);
      //until here

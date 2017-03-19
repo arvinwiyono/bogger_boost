@@ -11,6 +11,11 @@ export class FuelWidgetComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  }
+  	 let refreshMockTonnageData = setInterval(() => {
+       this.fuelEfficiency = Math.floor(Math.random() * 100) + 1 ;
+        
+     }, 5000);
+     //until here
+    }
 
 }
