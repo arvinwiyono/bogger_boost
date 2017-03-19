@@ -1,19 +1,33 @@
 <div class="row" id="homepage-container">
   <div class="row" style="text-align:center;">
-    <h2 style="color:#fff; font-weight:bold; font-size: 30pt;" (click)="logout()">Operator:
+    <h2 id="operator-name" (click)="logout()">
       {{operatorName}}
     </h2>
   </div>
 
   <div class="row">
-    <div class="col-md-6 col-md-offset-3" id="progress-bar-container">
+
+    <div class="col-md-2 col-md-offset-1">
+      <div class="personal-tonnage">
+        <p>Personal total tonage:</p>
+        <h1>
+          <img src="assets/person.png">
+          {{personalTonnage}}
+          <span>t</span>
+        </h1>
+      </div>
+    </div>
+
+    <div class="col-md-6 " id="progress-bar-container">
       <h3 style="color:#fff;">Your team's total tonnage</h3>
       <div class="row">
-        <div class="col-md-9">
-          <div class="progress">
-            <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
-              {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% Complete (success)
+        <div class="col-md-9 relativeProgressBar">
+                        <div *ngIf="extraCurrentTeamThroughput > 0"class="verticalLine" >          <div style="color:#fff"> + {{extraCurrentTeamThroughput}}</div>
+</div>
 
+          <div class="progress throughput-loading-bar ">
+            <div class="progress-bar progress-bar-success progress-bar-striped  active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
+              {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% <span>Complete (success)</span>
             </div>
           </div>
         </div>
@@ -28,6 +42,6 @@
   <div class="row" id="widget-box">
     <app-fuel-widget></app-fuel-widget>
     <app-throughput-widget></app-throughput-widget>
-	<app-time-widget></app-time-widget>
+    <app-time-widget></app-time-widget>
   </div>
 </div>
