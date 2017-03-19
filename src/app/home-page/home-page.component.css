@@ -1,3 +1,7 @@
+#homepage-container{
+    margin-top: 40px;
+}
+
 .cycle-time{
     color: White !important;
     text-align: center;
@@ -8,11 +12,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+.cycle-time h1{
+    margin-top: 5px;
+}
+
 .cycle-time h1 img{
     width: 25%;
     margin-top: -6px;
 }
 
+.cycle-time:hover{
+    transform: scale(1.05);
+}
 
 .percentage-counter{
     margin-top: 30px;
@@ -74,7 +85,7 @@
 }
 
 .throughput-loading-bar > div{
-    padding-top: 5px;
+    padding-top: 6px;
     font-size: 110%;
 }
 
