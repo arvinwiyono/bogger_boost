@@ -1,24 +1,29 @@
-#fuel-box {
-  background-image: url('./../../assets/oildrop.png');
-  background-size: 260px auto;
-  background-position: center;
-  font-weight: bolder;
-  color: #ffc600;
-  background-repeat: no-repeat;
-  min-height: 300px;
-  text-align: center;
-  padding-top: 135px;
-}
-
-#fuel-box span {
-  font-size: 30px;
+#fuel-box{
+    background-image: url('./../../assets/oildrop.png');
+    background-size: 260px auto;
+    background-position: center;
+    font-weight: bolder;
+    color: #ffc600;
+		background-repeat: no-repeat;
+		min-height: 300px;
+		text-align: center;
+		padding-top: 132px;
 }
 
 #fuel-box h1 {
-  font-size: 48px;
+	font-size: 70px;
+	font-weight: 300;
+}
+
+#fuel-box h1 span {
+	font-size: 30px;
 }
 
 #fuel-info {
   text-align: center;
   color: #ffc600;
+}
+#fuel-info h3 {
+	font-weight: 300;
+	letter-spacing: 3px;
 }

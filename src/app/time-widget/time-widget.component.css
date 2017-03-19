@@ -5,13 +5,30 @@
 		background-repeat: no-repeat;
 		min-height: 300px;
 		text-align: center;
-		padding-top: 145px;
+		padding-top: 130px;
 		color: #279EFF;
+}
+
+#timer-box h1 span {
+	font-size: 30px;
+}
+
+#timer-box h1 {
+	font-size: 70px;
+	margin-top: 0;
+	font-weight: 200;
 }
 
 #timer-info h3 {
 	color: #279EFF;
 	margin-bottom: 70px;
+	font-weight: 300;
+	letter-spacing: 3px;
+}
+
+#timer-box {
+	letter-spacing: 3px;
+	font-weight: 300;
 }
 
 #timer-box h4 {
@@ -21,15 +38,6 @@
 #timer-info {
 	text-align: center;
 	color: white;
-}
-
-#timer-box h1 span {
-	font-size: 30px;
-}
-
-#timer-box h1 {
-	font-size: 48px;
-	margin-top: 0;
 }
 
 #timer-info h1 {
