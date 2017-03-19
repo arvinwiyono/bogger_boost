@@ -7,7 +7,9 @@ export class SocketService {
   private host: string = window.location.protocol + "//" + window.location.hostname + ":" + 5000
   socket: SocketIOClient.Socket;
 
-  constructor() { }
+  constructor() { 
+      this.socket = io.connect(this.host);
+  }
 
   get(): Observable<any> {
         this.socket = io.connect(this.host);
@@ -17,8 +19,9 @@ export class SocketService {
             console.log(`ERROR: "${error}" (${this.host})`);
         });
 
+        // Return observable which follows "create" and "remove" signals from socket stream
         return Observable.create((observer: any) => {
-            this.socket.on("data", (data: any) => observer.next({ data: data }) );
+            this.socket.on("data", (data: any) => observer.next({ item: data }) );
             return () => this.socket.close();
         });
     }

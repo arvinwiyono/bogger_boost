@@ -6,6 +6,9 @@ import {
 import {
   SocketService
 } from 'app/services/socket.service';
+import { 
+  ISocketItem 
+} from 'models/socket-item.model';
 import {
   Observable
 } from "rxjs/Observable";
@@ -14,52 +17,64 @@ import {
   ActivatedRoute
 } from '@angular/router';
 
-
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.css']
-    //providers: [SocketService]
+  styleUrls: ['./home-page.component.css'],
+  providers: [SocketService]
 })
 
 
 export class HomePageComponent implements OnInit, OnDestroy {
-  teamThroughputGoal: number = 5000;
+  teamThroughputGoal: number = 10000;
   currentTeamThroughput: number = 1000;
   percentage: number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
   operatorName: string = 'Nick Wong - 226016';
   currentCycleTimeMin: number = 2;
-  currentCycleTimeSec: number = 10;
+  currentCycleTimeSec: string = '10';
   personalTonnage: number = 500;
   extraCurrentTeamThroughput: number = 0;
 
   // connection;
+  connection;
 
   //     constructor(private socketService: SocketService, private router: Router
   // ) {}
 
+  constructor(private socketService: SocketService) {}
+
   ngOnInit() {
+      this.connection = this.socketService.get().subscribe(
+          (socketItem: ISocketItem) =>{
+              this.currentTeamThroughput = Math.ceil(socketItem.item.teamTonnage);
+              if (this.currentTeamThroughput > this.teamThroughputGoal) {
+                this.extraCurrentTeamThroughput = this.currentTeamThroughput - this.teamThroughputGoal;
+                this.currentTeamThroughput = this.teamThroughputGoal;
+                // clearInterval(refreshMockData);
+              }
+              this.personalTonnage = Math.round(socketItem.item.totalTonage);
+              this.currentCycleTimeMin = socketItem.item.currentCycleTimeMin;
+              this.currentCycleTimeSec = ("0" + socketItem.item.currentCycleTimeSec).slice(-2);;
+              this.percentage = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
+          },
+          error => console.log(error)
+      );
     // this.connection = this.socketService.get().subscribe(data => {
     // 	console.log(data);
     //   this.currentTeamThroughput = data.teamTonnage;
     // })
 
     //Comment this section if socketservice works
-    let refreshMockData = setInterval(() => {
-      this.currentTeamThroughput = this.currentTeamThroughput + 100;
-      if (this.currentTeamThroughput > 5000) {
-        this.currentTeamThroughput = 5000;
-        if(this.extraCurrentTeamThroughput == 0){
-          this.extraCurrentTeamThroughput = 100;
-        }
-        this.extraCurrentTeamThroughput = this.extraCurrentTeamThroughput + 1;
-        // clearInterval(refreshMockData);
-      }
-    }, 1000);
+
+    // let refreshMockData = setInterval(() => {
+    //   this.currentTeamThroughput = this.currentTeamThroughput + 100;
+    //   if (this.currentTeamThroughput == 5000) {
+    //     clearInterval(refreshMockData);
+    //   }
+    // }, 1000);
     //until here
   }
-
-  ngOnDestroy() {
-    //this.connection.unsubscribe();
-  }
+    ngOnDestroy() {
+      this.connection.unsubscribe();
+    }
 }
