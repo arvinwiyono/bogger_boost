@@ -13,10 +13,11 @@
           <div class="progress">
             <div class="progress-bar progress-bar-warning progress-bar-striped active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
               {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% Complete (success)
+
             </div>
           </div>
         </div>
-        <div style="color:#fff;" class="col-md-3">
+        <div style="color:#fff;" class="col-md-3" style="font-size: 140%; color: white !important;">
           {{currentTeamThroughput}}/{{teamThroughputGoal}}
           tons
         </div>
@@ -27,6 +28,6 @@
   <div class="row" id="widget-box">
     <app-fuel-widget></app-fuel-widget>
     <app-throughput-widget></app-throughput-widget>
-		<app-time-widget></app-time-widget>
+	<app-time-widget></app-time-widget>
   </div>
 </div>
