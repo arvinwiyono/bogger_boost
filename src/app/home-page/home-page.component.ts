@@ -67,7 +67,7 @@ export class HomePageComponent implements OnInit, OnDestroy {
     //Comment this section if socketservice works
  let timer = setInterval(() => {
       let seconds = parseInt(this.currentCycleTimeSec) + 1;
-      if(seconds > 60){
+      if(seconds >= 60){
         this.currentCycleTimeMin = this.currentCycleTimeMin + 1;
         this.currentCycleTimeSec = "00";
       }
