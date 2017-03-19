@@ -8,9 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TimeWidgetComponent implements OnInit {
 	averageCycleTime:number = 3;
 	distance:number = 210;
-	currentCycleTimeMin:number = 2;
-	currentCycleTimeSec:number = 10;
-
+    
   constructor() { }
 
   ngOnInit() {

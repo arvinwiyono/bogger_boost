@@ -1,6 +1,6 @@
 <div class="row" id="homepage-container">
   <div class="row" style="text-align:center;">
-    <h2 id="operator-name" (click)="logout()">
+    <h2 id="operator-name" (click)="logout()" style="font-weight: bold;">
       {{operatorName}}
     </h2>
   </div>
@@ -9,7 +9,7 @@
 
     <div class="col-md-2 col-md-offset-1">
       <div class="personal-tonnage">
-        <p>Personal total tonage:</p>
+        <p>Total shift tonnage:</p>
         <h1>
           <img src="assets/person.png">
           {{personalTonnage}}
@@ -27,15 +27,26 @@
 
           <div class="progress throughput-loading-bar ">
             <div class="progress-bar progress-bar-success progress-bar-striped  active" role="progressbar" [ngStyle]="{'width': this.currentTeamThroughput * 100 / this.teamThroughputGoal + '%' }" aria-valuemin="0" aria-valuemax="100">
+
               {{this.currentTeamThroughput * 100 / this.teamThroughputGoal}}% <span>Complete (success)</span>
             </div>
           </div>
         </div>
-        <div style="color:#fff;" class="col-md-3" style="font-size: 140%; color: white !important;">
+        <div style="color:#fff;" class="col-md-2" style="font-size: 140%; color: white !important;">
           {{currentTeamThroughput}}/{{teamThroughputGoal}}
           tons
         </div>
       </div>
+    </div>
+
+    <div class="col-md-2" style="margin-left: 25px;">
+        <div class="cycle-time">
+          <p>Current cycle time:</p>
+          <h1>
+            <img src="assets/timing.png">
+            {{ currentCycleTimeMin }}:{{ currentCycleTimeSec }}
+          </h1>
+        </div>
     </div>
   </div>
 
