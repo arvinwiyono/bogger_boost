@@ -27,6 +27,8 @@ export class HomePageComponent implements OnInit, OnDestroy {
   currentTeamThroughput: number = 500;
   percentage: number = this.currentTeamThroughput * 100 / this.teamThroughputGoal;
   operatorName: string = 'Nick Wong - 226016';
+  currentCycleTimeMin: number = 2;
+  currentCycleTimeSec: number = 10;
   personalTonnage: number = 500;
 
   // connection;

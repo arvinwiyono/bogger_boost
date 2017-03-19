@@ -1,3 +1,19 @@
+.cycle-time{
+    color: White !important;
+    text-align: center;
+    border: 3px solid White;
+    border-radius: 7px;
+    width: 170px;
+    padding: 5px 0px;
+    transition: all 0.3s ease-in-out;
+}
+
+.cycle-time h1 img{
+    width: 25%;
+    margin-top: -6px;
+}
+
+
 .percentage-counter{
     margin-top: 30px;
 }
@@ -36,6 +52,7 @@
 }
 #progress-bar-container{
     text-align: center;
+    margin-left: 30px;
 }
 
 #widget-box{
