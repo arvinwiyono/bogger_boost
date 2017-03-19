@@ -1,4 +1,4 @@
-#bucket-box{
+#timer-box{
     background-image: url('./../../assets/stopwatch.png');
     background-size: 220px auto;
 		background-position: center;
@@ -6,4 +6,25 @@
 		min-height: 300px;
 		text-align: center;
 		padding-top: 110px;
+		color: #279EFF;
+}
+
+#timer-box h3 {
+	font-size: 18px;
+}
+
+#timer-info {
+	text-align: center;
+}
+
+#timer-info h1 {
+	margin: 0;
+	font-size: 50px;
+	font-weight: 200;
+}
+
+#timer-info h3 {
+	margin: 0;
+	color: #279EFF;
+	font-weight: 200;
 }
